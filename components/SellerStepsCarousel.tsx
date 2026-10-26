@@ -89,7 +89,7 @@ export default function SellerStepsCarousel() {
           <article className="seller-carousel-card" key={step.title}>
             <div className="seller-carousel-card-top">
               <span className="feature-card-icon seller-icon">
-                <MunchiesIcon size={26} />
+                <MunchiesIcon name="sell" size={26} />
               </span>
               <span className="step-number">0{index + 1}</span>
             </div>
