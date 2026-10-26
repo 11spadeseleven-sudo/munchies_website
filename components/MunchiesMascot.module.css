@@ -1,0 +1,19 @@
+.root { position:fixed; z-index:1000; right:16px; bottom:calc(14px + env(safe-area-inset-bottom, 0px)); display:flex; align-items:flex-end; flex-direction:column; gap:8px; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; pointer-events:none; }
+.left { right:auto; left:16px; align-items:flex-start; }
+.root > * { pointer-events:auto; }
+.mascotButton { padding:0; width:120px; height:145px; background:none; border:0; cursor:pointer; filter:drop-shadow(0 8px 10px rgba(0,0,0,.18)); transition:transform .2s ease; display:grid; place-items:end center; }
+.mascotButton:hover { transform:translateY(-5px); }
+.mascotButton:focus-visible,.close:focus-visible,.links a:focus-visible { outline:3px solid #f94444; outline-offset:3px; }
+.mascotButton img { display:block; width:100%; height:100%; object-fit:contain; }
+.bubble { color:#1a1a1a; font-size:13px; font-weight:700; background:white; border:1px solid #eee; border-radius:16px 16px 4px 16px; padding:10px 14px; box-shadow:0 5px 18px #0002; white-space:nowrap; margin-right:44px; }
+.panel { background:#fff; color:#202024; border-radius:16px; border:1px solid #ededed; width:min(300px,calc(100vw - 32px)); padding:18px; box-shadow:0 14px 42px #0003; }
+.panelTop { display:flex; align-items:center; justify-content:space-between; gap:10px; }
+.panelTop strong { font-size:20px; }
+.panel p { font-size:14px; line-height:1.4; margin:9px 0 12px; }
+.close { border:0; border-radius:50%; width:30px; height:30px; cursor:pointer; font-size:23px; line-height:1; background:#f1f1f1; color:#333; }
+.links { display:flex; flex-direction:column; gap:8px; }
+.links a { display:flex; justify-content:space-between; align-items:center; gap:12px; border-radius:10px; padding:12px; background:#fff0f0; color:#b31319; text-decoration:none; font-size:14px; font-weight:700; }
+.links a:hover { background:#ffe2e2; }
+.configure { color:#777; font-size:12px!important; }
+@media (max-width:640px) { .root { bottom:calc(14px + env(safe-area-inset-bottom, 0px)); right:8px; } .root.left { right:auto; left:8px; } .mascotButton { width:92px; height:112px; } .bubble { font-size:12px; margin-right:14px; } }
+@media (prefers-reduced-motion:reduce) { .mascotButton { transition:none; } }
